@@ -1,0 +1,350 @@
+
+@font-face {
+    font-family: 'NASA';
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+#AutorRotate {
+    font-size: 16px;
+    cursor: pointer;
+}
+#GoBack{
+    position:absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
+}
+
+
+#RotacionExoplaneta {
+    position:absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+#globeViz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden; /* Elimina el desbordamiento */
+}
+
+.botones{
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    color:black;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    border: 0;
+    padding: 0.125rem 0.625rem;
+    border-radius: 6px;
+    width: 100px;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    transition: color .2s ease;
+    transition: background-color .2s ease;
+}
+
+.botones:hover{
+    background-color: #5c5c5c;
+    color: #ffffff;
+    
+
+}
+
+.botones-grandes{
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    color:black;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    border: 0;
+    padding: 0.125rem 0.625rem;
+    border-radius: 6px;
+    width: 100px;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    transition: color .2s ease;
+    transition: background-color .2s ease;
+}
+
+.botones-grandes:hover{
+    background-color: #5c5c5c;
+    color: #ffffff;
+    
+
+}
+
+.rotacion{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita las barras desplazadoras */
+}
+
+h1{
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+#total {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden; /* Asegúrate de que no se desborde */
+}
+
+.scene-container{
+    height: auto;
+}
+
+
+
+
+#nav{
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 100vh;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: rgba(86, 86, 86, 0.02);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 100vh; /* Asegura que ocupe toda la altura */
+    overflow: auto; /* Para permitir desplazarse solo dentro de la nav */
+    display: flex;
+    flex-direction: column;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu-title{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.list__show{
+    flex-grow: 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    list-style-type: none;
+}
+
+.list__button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+list__img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #ffffff;
+    flex-grow: 1;
+}
+
+.list__button{
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+}
+
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+.list__inside{
+    padding: 10px;
+    list-style-type: none;
+}
+
+.nav__link--inside{
+    font-size: 14px;
+}
+
+
+
+.intro_diseno{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    background-color: rgba(86, 86, 86, 0.02);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 100vh;
+    z-index: 10; /* Ajusta el tamaño según lo necesites */
+    overflow: auto;
+}
+.col_inter {
+    position: absolute;
+    left: 50%;
+    width: 80%; /* Aumenta el ancho del contenedor */
+    transform: translateX(-50%);
+    text-align: center; /* Centrar horizontalmente solo el título */
+    padding: 0px;
+    font-size: 18px;
+    margin-bottom: 2px;
+    color: #ffffffcc;
+}
+
+.informacion {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0px;
+    font-size: 15px;
+    width: 80%; /* Aumenta el ancho del contenedor */
+    max-width: 400px; /* Limitar el ancho máximo */
+    line-height: 1.8; /* Aumentar el espacio entre líneas */
+    margin-bottom: 100px;
+    color: #ffffffcc;
+    display: flex;
+}
+
+.speed-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; /* Espaciado alrededor del control */
+}
+
+.rotacion {
+    margin-bottom: 10px; /* Espaciado entre la etiqueta y la barra */
+    font-size: 14px;
+     /* Tamaño de la fuente de la etiqueta */
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Para quitar el estilo por defecto en navegadores WebKit */
+    width: 80%; /* Ancho completo */
+    height: 10px; /* Altura de la barra */
+    border-radius: 5px; /* Bordes redondeados */
+    background: #ddd; /* Color de fondo de la barra */
+    outline: none; /* Sin borde de enfoque */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Para quitar el estilo por defecto en navegadores WebKit */
+    appearance: none; /* Para navegadores modernos */
+    width: 20px; /* Ancho del controlador */
+    height: 20px; /* Altura del controlador */
+    border-radius: 50%; /* Controlador circular */
+    background: #757575; /* Color del controlador */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 10px; /* Ancho del controlador */
+    height: 20px; /* Altura del controlador */
+    border-radius: 50%; /* Controlador circular */
+    background: #4CAF50; /* Color del controlador */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.item-description{
+    height: 200px;
+    overflow: auto;
+
+    /* display: ; */
+}
+
+.item-description::-webkit-scrollbar{
+    width: 8px; /* Width of the scrollbar */
+    background-color: transparent;
+}
+
+.nav::-webkit-scrollbar{
+    width: 8px; /* Width of the scrollbar */
+    background-color: transparent;
+}
+
+
+.item-description::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 4px;
+}
+
+.item-description::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#item-details{
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+}
+
+.hidden{
+    /* display: none; */
+}
+
+h3, p{
+    margin: 0;
+}
+h3{
+    
+    font-weight: 400;
+}

@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'NASA';
+    src: url('/ExoJumpBuild/fonts/NASA.ttf') format('truetype'); /* Cambia el nombre del archivo según sea necesario */
+    font-weight: normal;
+    font-style: normal;
+  }
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://user-images.githubusercontent.com/26748614/96337412-581f2e80-1087-11eb-90f3-f033a8a1b41e.jpg");
+    background-size: cover;
+    font-family: 'NASA'; /* Establecer la fuente aquí */
+}
+
+canvas {
+    display: block;
+}
+
+#canvas_container {
+    width: 100%;
+    height: 100vh;
+    position: absolute; /* Asegurarse de que esté en la parte superior */
+    top: 0;
+    left: 0;
+}
+
+button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.9em;
+    background: #000000;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para el texto de bienvenida */
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    pointer-events: none; /* Evita que los eventos del mouse afecten al texto */
+    opacity: 0; /* Comienza con opacidad 0 */
+    transition: opacity 0.5s ease-in; /* Transición suave para la opacidad */
+}
+
+#continue {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+}

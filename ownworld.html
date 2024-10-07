@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <link rel="stylesheet" href="/ExoJumpBuild/css/styles.css">
+    <link rel="icon" href="/ExoJumpBuild/image/Logos/LogoByN.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExoJump🪐 - Your Own World</title>
+    <script src="//unpkg.com/globe.gl"></script>
+    <button id="Go Back" onclick=" window.location.href = 'index.html'">Go Back</button>
+</head>
+
+<body>
+    <script src="/ExoJumpBuild/js/music.js"></script>
+    <div id="globeViz" style="width: 100%; height: 100vh;"></div>
+    
+    <script type="module">
+        // Aquí puedes incluir el código que necesitas para cargar la imagen guardada
+        const savedImage = localStorage.getItem('savedImage'); // Obtener la imagen del almacenamiento local
+        if (savedImage) {
+            const img = new Image();
+            img.src = savedImage; // Usar la imagen guardada
+            img.onload = function() {
+                // Inicializa Globe y usa la imagen como textura
+                const world = Globe()(document.getElementById('globeViz'))
+                    .globeImageUrl(savedImage) // Usa la imagen guardada
+                    .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png');
+
+                // Configuración de auto-rotación
+                world.controls().autoRotate = true;
+                world.controls().autoRotateSpeed = 0.35;
+            };
+        } else {
+            console.log("No se encontró ninguna imagen guardada.");
+        }
+    </script>
+    <button class="botones" id="GoBack" onclick=" window.location.href = 'index.html'">Go Back</button>
+</body>
+</html>

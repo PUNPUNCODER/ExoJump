@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ExoJump🪐</title>
+    <link rel="icon" href="/ExoJumpBuild/image/Logos/LogoByN.png">
+    <link rel="stylesheet" href="/ExoJumpBuild/css/paint.css">
+    <script src="/ExoJumpBuild/js/paint.js" defer></script>
+</head>
+
+<body>
+    <script src="/ExoJumpBuild/js/music.js"></script>
+    <canvas id="canvas"></canvas>
+    <div class="nav">
+        <div class="clr" data-clr="#000"></div>
+        <div class="clr" data-clr="red"></div>
+        <div class="clr" data-clr="orange"></div>
+        <div class="clr" data-clr="blue"></div>
+        <div class="clr" data-clr="purple"></div>
+        <div class="clr" data-clr="yellowgreen"></div>
+        <div class="clr" data-clr="yellow"></div>
+        <div class="clr" data-clr="#fff"></div>
+        <button class="clear">Clear</button>
+        <button class="save">Model</button>
+
+        <!-- Botón para cambiar el color de fondo -->
+        <input type="color" id="favcolor" value="#FFFFFF">
+
+        <!-- Nuevo botón para seleccionar el color de pintura -->
+        <input type="color" id="paintcolor" value="#000000">
+
+        <input type="range" name="ageInputName" id="ageInputId" value="15" min="10" max="100" oninput="ageOutputId.value = ageInputId.value">
+        <output id="ageOutputId">10</output>
+        <div class="emoji">👩‍🚀</div>
+    </div>
+</body>
+</html>

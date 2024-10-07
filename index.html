@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    
+    <head>
+        <title>ExoJump🪐</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ExoJumpBuild/css/styles.css">
+    <link rel="icon" href="/ExoJumpBuild/images/Logos/LogoByN.png">
+    <link rel="stylesheet" href="https.//fonts.googleapis.com">
+    <link rel="stylesheet" href="https.//fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/44e3b11ab1.js" crossorigin="anonymous"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+    <script src="//unpkg.com/three/build/three.module.js"></script>
+</head>
+
+<body>
+
+    <script src="/ExoJumpBuild/js/music.js"></script>
+    <div id="total">
+
+    <div id="globeViz"></div>
+    
+    <nav class="nav" id="nav">
+        <h1 class="menu-title">ExoJump🪐</h1>
+        <ul class="list">
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <a href="#" class="nav__link"><i class="fa-solid fa-globe"></i> Exoplanets</a>
+                    <i class="list__arrow fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="list__show">
+                    <div id="botones-planetas">
+                        <a class="botones botones-planetas" id="WASP-6b">WASP-6b</a>
+                        <a class="botones botones-planetas" id="WASP-31b">WASP-31b</a>
+                        <a class="botones botones-planetas" id="WASP-39b">WASP-39b</a>
+                        <a class="botones botones-planetas" id="HD189733b">HD189733b</a>
+                        <a class="botones botones-planetas" id="HAT-P-12b">HAT-P-12b</a>
+                        <a class="botones botones-planetas" id="WASP-17b">WASP-17b</a>
+                        <a class="botones botones-planetas" id="WASP-19b">WASP-19b</a>
+                        <a class="botones botones-planetas" id="HAT-P-1b">HAT-P-1b</a>
+                        <a class="botones botones-planetas" id="HD209458b">HD209458b</a>
+                    </div>
+                </ul>
+            </li>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <a href="#" class="nav__link"><i class="fa-solid fa-user-astronaut"></i> Activities</a>
+                    <i class="list__arrow fa-solid fa-chevron-right"></i>
+                </div>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <button class="botones-grandes" id="OwnExoplanet" onclick=" window.location.href = 'paint.html' ">Make Your Exoplanet</button>
+                    </li>
+                    
+                    <li class="list__inside">
+                        <button class="botones-grandes" id="OwnExoplanet" onclick=" window.location.href = 'gameintro.html' ">Discover An Exoplanet</button>
+                    </li>
+                    <li class="list__inside">
+                        <button class="botones-grandes" id="OwnExoplanet" onclick=" window.location.href = 'test.html' ">How much did you learn?</button>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <a href="#" class="nav__link"><i class="fa-solid fa-meteor"></i> Parameters</a>
+                    <i class="fa-solid fa-chevron-right list__arrow"></i>
+                </div>
+                
+    
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <button class="botones-grandes" id="speakButton" >Text to Speech </button>
+                    </li>
+                    <li class="WASP-6b">
+                        <button id="AutoRotate" class="botones">AutoRotation</button>
+                    </li>
+                    <li class="WASP-6b">
+                        <input type="range" id="speedSlider" min="-2" max="2" step="0.05" value="0.35">
+                        
+                        <label class="rotacion" for="speedSlider">Rotation Speed</label>
+                    </li>
+                    
+                </ul>
+            </li>
+    
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <a href="#" class="nav__link"><i class="fa-solid fa-satellite-dish"></i> About Us</a>
+                    <i class="fa-solid fa-chevron-right list__arrow"></i>
+                </div>
+    
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a class="botones">Contact Us</a>
+                    </li>
+                    <li class="list__inside">
+                        <a class="botones">Our Mission</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="intro_diseno">
+        <div class="col_inter">
+            <h1 id="planet-title">HotJupiter</h1> 
+        </div>
+        <div class="informacion">
+            <div> 
+                <div class="item-description">
+                    <p>A "Hot Jupiter" is a type of exoplanet that's big and gas-filled, kind of like our Jupiter. But unlike Jupiter, which is far from the Sun, Hot Jupiters are very close to their stars, making them super hot! Because they orbit so near, these planets can be hundreds of times hotter than Earth, with surface temperatures reaching thousands of degrees. They're often so close to their stars that it takes them just a few days to complete an orbit! This makes them easy for scientists to spot even though they’re light-years away.</p>
+                </div>
+                <div id="item-details">
+                    <div id="planet-radius">
+                        <h3>Planet Radius</h3>
+                        <p></p>
+                    </div>
+                    <div id="planet-type">
+                        <h3>Planet Type</h3>
+                        <p></p>
+                    </div>
+                    <div id="discovery-method">
+                        <h3>Discovery Method</h3>
+                        <p></p>
+                    </div>
+                    <div id="planet-mass">
+                        <h3>Planet Mass</h3>
+                        <p></p>
+                    </div>
+                    <div id="discovery-date">
+                        <h3>Discovery Date</h3>
+                        <p></p>
+                    </div>
+                    <div id="orbital-radius">
+                        <h3>Orbital Radius</h3>
+                        <p></p>
+                    </div>
+                    <div id="orbital-period">
+                        <h3>Orbital Period</h3>
+                        <p></p>
+                    </div>
+                    <div id="eccentricity">
+                        <h3>Eccentricity</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        
+</div>
+
+
+    <script src="/ExoJumpBuild/js/menu.js"></script>
+    <script type="module" src="/ExoJumpBuild/js/script.js"></script>
+    
+
+</body>
+</html>

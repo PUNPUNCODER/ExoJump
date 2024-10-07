@@ -1,0 +1,32 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    background-color: #000000; 
+    color: #FFFFFF; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+#welcomeText {
+    max-width: 1100px; /* Establecer un ancho máximo del texto respecto al borde */
+    width: 90%; 
+    font-size: 24px;
+    text-align: center;
+    opacity: 1; 
+    transition: opacity 0.5s ease-in; /* Transición suave para la opacidad */
+    padding: 20px; 
+}
+
+#continueText {
+    font-size: 24px;
+    color: #FFFFFF; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in; 
+    position: absolute;
+    bottom: 10%; /* Ajustar según sea necesario */
+    text-align: center; 
+}

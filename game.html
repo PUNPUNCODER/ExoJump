@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ExoJump🪐</title>
+    <link rel="icon" href="/ExoJumpBuild/image/Logos/LogoByN.png">
+  <link rel="stylesheet" href="/ExoJumpBuild/css/gamestyle.css">
+</head>
+<body>
+  <script src="/ExoJumpBuild/js/music.js"></script>
+  <canvas id="estrellas"></canvas>
+  <canvas id="canvas"></canvas>
+  <div class="manual">
+    <strong>Movement : </strong>mouse, <strong>Shot: </strong>Left click,  `m` for Missile, <strong>Shield : </strong>'s'<br>
+  </div>
+  <div id="menu" class="menu">
+    <button id="startButton" aria-label="Iniciar juego">Start Game</button>
+    <button id="exitButton" aria-label="Salir del juego">Leave</button>
+  </div>
+
+  <style>
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99999;
+        background: rgba(0, 0, 0, 0.7); /* Aumentar opacidad para mayor visibilidad */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .menu button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        background: rgba(196, 71, 71, 0);
+    }
+  </style>
+
+  <script>
+    document.getElementById('startButton').onclick = function() {
+        document.getElementById('menu').style.display = 'none';
+        iniciarJuego(); // Llama a tu función de inicio de juego
+    };
+  </script>
+
+  <script src="/ExoJumpBuild/js/gamescript.js"></script>
+  <script src="/ExoJumpBuild/js/gamescript2.js"></script>
+</body>
+</html>
