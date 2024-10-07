@@ -171,7 +171,7 @@ function init() {
 
     // Botón que redirige al hacer clic
     document.body.addEventListener('click', function() {
-        window.location.href = "index.html"; // Cambia "tu_archivo.html" por el nombre de tu archivo HTML
+        window.location.href = "main.html"; // Cambia "tu_archivo.html" por el nombre de tu archivo HTML
     });
 }
 

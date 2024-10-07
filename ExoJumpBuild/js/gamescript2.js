@@ -467,5 +467,5 @@ document.getElementById('startButton').onclick = function() {
 
 // Evento para el botón de salir
 document.getElementById('exitButton').onclick = function() {
-  window.location.href = "index.html"; 
+  window.location.href = "main.html"; 
 };
